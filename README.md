@@ -109,13 +109,13 @@ After running the `adk create` command, your `personal_assistant` directory will
   - `__init__.py`: An empty file that marks this directory as a Python package.
   - `agent.py`: This is the core of your agent. It contains the main logic, including the agent's prompts and tool definitions. You will spend most of your time editing this file to customize your agent's behavior.
 - `.env`: This file is used to store environment variables for your project, such as API keys or your Google Cloud Project ID and location. The `adk` automatically populates this file with the values you provided during setup.
-- `custom_agents.py`: Contains the `google_search_agent`, a specialized agent for performing Google searches.
- - `custom_functions.py`: Includes custom-defined functions like `get_fx_rate` for fetching currency exchange rates.
-- `third_party_tools.py`: Integrates third-party tools, such as the Langchain Wikipedia tool.
+
 
 ### 8. Run the Agent
 
 You have two primary ways to interact with and test your agent: the Command Line Interface (CLI) for simple chat, or the built-in Web Developer UI for powerful debugging and tracing.
+
+- Stay in your GoogleADKTrainingCode Folder.
 
 - Running the Agent via CLI: Start an interactive chat session with your agent directly in the terminal:
 
@@ -125,4 +125,27 @@ You have two primary ways to interact with and test your agent: the Command Line
 
   ```bash
     uv run adk web
+Open the URL provided in your terminal (typically http://localhost:8000 or http://127.0.0.1:8000) to access the UI.
+
+
+### 9. Empowering Agents with Tools
+The final step is to see an agent with tools that it can use to perform actions. Add the following files to your current project. 
+    
+    touch personal_assistant/custom_agents.py 
+
+    touch personal_assistant/custom_functions.py
+
+    touch personal_assistant/third_party_tools.py
+
+- `custom_agents.py`: Contains the `google_search_agent`, a specialized agent for performing Google searches.
+ - `custom_functions.py`: Includes custom-defined functions like `get_fx_rate` for fetching currency exchange rates.
+- `third_party_tools.py`: Integrates third-party tools, such as the Langchain Wikipedia tool.
+
+### 10. Run the Updated Agent(with tools)
+Stay in your GoogleADKTrainingCode Folder and run either of the following commands: 
+
+    uv run adk web
+    |OR|
+    uv run adk run personal_assistant
+
 Open the URL provided in your terminal (typically http://localhost:8000 or http://127.0.0.1:8000) to access the UI.
