@@ -124,5 +124,5 @@ You have two primary ways to interact with and test your agent: the Command Line
 - Launching the Developer Web UI: For a visual interface that allows you to trace the agent's internal thought process and tool calls, launch the adk web UI. This is an essential tool for effective development and debugging.
 
   ```bash
-    uv run adk run personal_assistant
+    uv run adk web
 Open the URL provided in your terminal (typically http://localhost:8000 or http://127.0.0.1:8000) to access the UI.
