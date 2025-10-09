@@ -137,6 +137,8 @@ The final step is to see an agent with tools that it can use to perform actions.
 
     touch personal_assistant/third_party_tools.py
 
+Once the files are created, go ahead and update them with the code in the above files. Here is a breakdown of each of the code files:
+
 - `custom_agents.py`: Contains the `google_search_agent`, a specialized agent for performing Google searches.
  - `custom_functions.py`: Includes custom-defined functions like `get_fx_rate` for fetching currency exchange rates.
 - `third_party_tools.py`: Integrates third-party tools, such as the Langchain Wikipedia tool.
